@@ -1,1 +1,1 @@
-web: gunicorn geonames-reconcile:app
+web: gunicorn reconcile:app
