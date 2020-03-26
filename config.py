@@ -1,3 +1,3 @@
 import os
 
-GEONAMES_USERNAME = os.environ['GEONAMES_USERNAME']
+GEONAMES_USERNAME = 'mhale16'
