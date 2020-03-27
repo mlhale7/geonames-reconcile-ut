@@ -17,6 +17,7 @@ from sys import version_info
 
 app = Flask(__name__)
 app.config.from_object('config')
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
 geonames_username = app.config['GEONAMES_USERNAME']
 
