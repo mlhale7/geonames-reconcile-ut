@@ -90,7 +90,6 @@ def make_uri(geonames_id):
     geonames_uri = geonames_uri_base.format(geonames_id)
     return geonames_uri
 
-
 def jsonpify(obj):
     """
     Helper to support JSONP
@@ -102,7 +101,6 @@ def jsonpify(obj):
         return response
     except KeyError:
         return jsonify(obj)
-
 
 def search(raw_query, query_type='/geonames/all'):
     """
@@ -167,7 +165,7 @@ def search(raw_query, query_type='/geonames/all'):
     return sorted_out[:3]
 
 
-@app.route("/reconcile", methods=['POST', 'GET'])
+@app.route("/", methods=['POST', 'GET'])
 def reconcile():
     # If a 'queries' parameter is supplied then it is a dictionary
     # of (key, query) pairs representing a batch of queries. We
@@ -187,10 +185,11 @@ def reconcile():
     # we should return the service metadata.
     return jsonpify(metadata)
 
+
 if __name__ == '__main__':
     from optparse import OptionParser
     oparser = OptionParser()
-    oparser.add_option('-d', '--debug', action='store_true', default=False)
+    oparser.add_option('-d', '--debug', action='store_true', default=True)
     opts, args = oparser.parse_args()
     app.debug = opts.debug
     app.run(host='0.0.0.0')
