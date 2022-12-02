@@ -77,3 +77,4 @@ I'd also like to build in a way to use other columns as additional search proper
 
 Finally, finding a better way to handling the API username updates as well as parsing name plus coordinates (instead of the hack I've put into this for the time being) would be great.
 
+
