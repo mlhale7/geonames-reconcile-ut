@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "geonames-reconcile"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "geonames_reconcile"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.1"
+fuzzywuzzy = "^0.18.0"
+requests = "^2.31.0"
+python-levenshtein = "^0.24.0"
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
